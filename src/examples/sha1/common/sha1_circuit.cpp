@@ -21,7 +21,7 @@
 #include "../../../abycore/ENCRYPTO_utils/cbitvector.h"
 #include "../../../abycore/ENCRYPTO_utils/crypto/crypto.h"
 
-int32_t test_sha1_circuit(e_role role, char* address, uint16_t port, seclvl seclvl, uint32_t nvals, uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing) {
+int32_t test_sha1_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl, uint32_t nvals, uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing) {
 	uint32_t bitlen = 32;
 	uint32_t sha1bits_per_party = ABY_SHA1_INPUT_BITS/2;
 	uint32_t sha1bytes_per_party = bits_in_bytes(sha1bits_per_party);
