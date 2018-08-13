@@ -70,6 +70,8 @@ void ArithSharing<T>::InitNewLayer() {
 	m_vInputShareGates.clear();
 	m_vOutputShareGates.clear();
 
+	// Reset send buffer for client - values will be set in EvaluateCONVGate
+	if (m_eRole == CLIENT) m_vConvShareSndBuf.Reset();
 }
 
 template<typename T>
